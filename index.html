@@ -12,14 +12,96 @@
         <meta name="description" content="Conversor de husos horarios entre países que incluye calendario de feriados y días no laborales y horario actual de cada país">
         <meta name="keywords" content="husos horarios, reloj, feriados, hora, tiempo, país, conversor">
 
+        <!--CSS-->
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/estilos.css">
+
         <!--Javascript-->
         <script defer src="./js/script.js"></script>
     </head>
     <body>
+        <header>
+            <nav>
+                <div>
+                    <!--Navegación-->
+                    <ul>
+                        <li><a href="#">INICIO</a></li>
+                        <li><a href="./pages/conversor.html">CONVERSOR</a></li>
+                        <li><a href="./pages/feriados.html">FERIADOS</a></li></li>
+                        <li><a href="./pages/mi_huso_horario.html">MI HUSO HORARIO</a></li></li>
+                        <li><a href="./pages/mi_perfil.html">MI PERFIL</a></li></li>                      
+                </div>
+            </nav>
+        </header>
+
+        <main>
+
+        </main>
+        <h1>Bienvenido a TempoClock</h1>
+        <div>
+            <p>Este conversor de horarios te permitirá organizar reuniones y llamadas de equipo entre personas de distintas partes del mundo.</p>
+            
+            <p>Vas a poder identificar el huso horario que tiene cada país, cuantas horas de diferencia hay entre países y obtener una lista de feriados/días no laborables por país.</p>
+    
+            <p>Desde tu perfil, podrás acceder a una lista de los distintos países que con mayor frecuencia consultas.</p>
+            <div>
+                <h2>Inicia tu experiencia Mundial con Tempo</h2>
+                <div>
+                    <input type="submit" value="Iniciar Sesión">
+                    <input type="submit" value="Registrarse">
+                </div>
+                
+            </div>
+            
+        </div>
         
-        <h1>Conversor de horarios</h1>
 
-        <p>Este conversor de horarios te permitirá identificar que huso horario tiene cada país, hacer una comparativa de horarios entre países y obtener una lista de feriados/días no laborables por país. También brinda la oportunidad de, en caso de crearse una cuenta, el usuario podrá guardar información para poder acceder a ella siempre que se la necesite sin necesidad de usar el conversor nuevamente (solo requiere ingresar al perfil).</p>
+        <!--Accesos a otras páginas del sitio-->
+        <section>
+            <div>
+                <!--Primera carta: CONVERSOR-->
+                <div>
+                    <a href="./pages/conversor.html">
+                        <img src="./assets/img/conversor_inicio_card.webp" loading="lazy">
+                        <div>
+                            <h3>CONVERSOR</h3>
+                            <p>Obtenga los husos horarios, la hora actual y la cantidad de horas de diferencia entre dos paises.</p>
+                        </div>
+                    </a>
+                </div>
 
+                <!--Segunda carta: FERIADOS-->
+                <div>
+                    <a href="./pages/feriados.html">
+                        <img src="./assets/img/feriados_inicio_card-01.webp" loading="lazy">
+                        <div>
+                            <h3>FERIADOS</h3>
+                            <p>Obtenga una lista de feriados de un país.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Tercer carta: MI HUSO HORARIO-->
+                <div>
+                    <a href="./pages/mi_huso_horario.html">
+                        <img src="./assets/img/mi_huso_inicio_card.webp" loading="lazy">
+                        <div class="card-body textoTarjeta">
+                            <h3>MI HUSO HORARIO</h3>
+                            <p>Obtenga el huso horario (UTC) de un país.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <footer>
+        <!--FOOTER-->
+        <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a class="linkFooter" href="./pages/mi_perfil.html">Mi perfil</a></li>
+        </ul>            
+        </footer>
     </body>
 </html>

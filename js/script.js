@@ -1,8 +1,9 @@
 
 /* ----- Variables y constantes ----- */
 let usuariosRegistrados = [];
+let mailsUsuariosRegistrados = [];
 let usuarioActual;
-let estaLogeado = false;
+let estaUsuarioLogueado;
 
 
 
@@ -254,69 +255,10 @@ const listaHusosHorariosPorPais = [
 ];
 
 
-
-const inicio = "iniciar sesion"
-const registro = "registrarse"
-
-const letrasConTilde = ["á", "é", "í", "ó", "ú", "Á", "É", "Í", "Ó", "Ú"];
-const letrasSinTilde = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
-
-/* ------ Funcionamiento: Texto ------- */
-function sacarTildes(palabra) {
-    
-    let palabraSinTilde = ""
-    let eraConTilde = false
-    
-    for(letra of palabra){
-        
-        let contador = 0;
-        
-        for(l of letrasConTilde){
-            
-            if(letra === l){
-                palabraSinTilde += letrasSinTilde[contador];
-                eraConTilde = true
-                break;
-            } else {
-                contador += 1;
-                continue
-            }
-        }
-
-        if(eraConTilde){
-            eraConTilde = false;
-            continue;
-        } else {
-            palabraSinTilde += letra;
-        }
-    }
-
-    return palabraSinTilde;
-}
-
-
-/* ------ Funcionamiento: Paises -------- */
-
-function esPaisValido(paisIngresado) {
-    for(pais of paisesStrings){
-        let paisLowerCase = sacarTildes(pais.toLowerCase());
-        paisIngresado = sacarTildes(paisIngresado.toLowerCase())
-
-        if(paisIngresado === paisLowerCase){
-            return true;
-        }
-    }
-    return false;
-}
+/* ------ Funcionamiento-------- */
 
 function seleccionarPais(nombrePais){
-        
-    while(esPaisValido(nombrePais) === false){
-        nombrePais = prompt("Por favor, ingresar un país válido.")
-    }
-
-    return listaPaises.find((elem) => sacarTildes(elem.nombre.toLowerCase()) === sacarTildes(nombrePais.toLowerCase()))
-
+    return listaPaises.find((elem) => elem.nombre === nombrePais);
 }
 
 function getFactorSumador(huso) {
@@ -347,15 +289,29 @@ function getFactorSumador(huso) {
     return factorSumador;
 }
 
+function ObtenerMinutos(numeroFloat){
+    if (numeroFloat-0.5 == 0){
+        return 30;
+    }else {
+        return 45;
+    }
+}
+
+function esUTCEspecial(numeroFloat){
+    if(numeroFloat == parseInt(numeroFloat)){
+        return false;
+    }
+    return true;
+}
 
 /* ----- BASE DE DATOS ----- */
 
 class Pais {
     constructor (nombre, huso) {
-        this.nombre = nombre;
-        this.huso = huso;                   //Huso horario correspondiente a ese pais.
+        this.nombre = nombre;                           //String
+        this.huso = huso;                               //String del Huso horario correspondiente a ese pais.
         this.feriados = listaFeriados.nombre;           //Lista con los feriados o días no laborables de ese país.
-        this.factorSumador = getFactorSumador(huso);
+        this.factorSumador = getFactorSumador(huso);    //Float
     }
     //Getters
     obtenerFactorSumador() {return this.factorSumador}
@@ -377,6 +333,25 @@ class Pais {
     calcularDiferenciaHoraria(otroPais) {         //Retorna un entero que representa la diferencia horaria entre dos paises.        
         return Math.abs(this.factorSumador - otroPais.getFactorSumador())
     }
+
+    obtenerHoraActual(){
+        let horaActualUsuario = new Date();
+        let aux = horaActualUsuario.toTimeString().split("GMT");
+        let sumadorString = aux[1].split(" ");
+        let sumador = parseFloat(sumadorString * 0.01)
+
+        let cantidadHoras = parseInt(this.factorSumador);
+        let cantidadMinutos = 0;
+
+        if(esUTCEspecial(this.factorSumador)){
+            cantidadMinutos = ObtenerMinutos(this.factorSumador);
+        }
+
+        let horaPais = new Date( horaActualUsuario.getFullYear(), horaActualUsuario.getMonth(), horaActualUsuario.getDate(), Math.abs(horaActualUsuario.getHours() - cantidadHoras),  Math.abs(horaActualUsuario.getMinutes() - cantidadMinutos), horaActualUsuario.getSeconds());
+        
+        return horaPais;
+    }
+    
 
 
 }
@@ -402,112 +377,50 @@ function crearListaPaises() {
 const listaPaises = crearListaPaises();
 
 class Usuario {
-    constructor (nombre, apellido, pais, husoHorario, password, mail){
+
+    constructor (nombre, apellido, pais, password, mail){
         this.nombre = nombre;
         this.apellido = apellido;
         this.pais = seleccionarPais(pais);
-        this.husoHorario = husoHorario;
         this.password = password;
         this.mail = mail;
     }
+
+    //Getter
+    obtenerNombreCompleto() { return this.nombre + " " + this.apellido;}    //Retorna un string
+    obtenerHusoHorario() { return this.pais.huso;}                          //Retorna un string
+    obtenerEmail() {return this.mail;}                                      //Retorna un string
+    obtenerPaisResidencia() {return this.pais;}                             //Retorna un objeto Pais. 
+    obtenerPassword() {return this.password;}
+
 }
-
-
 
 /* -------- Funcionamiento: Inicio de Sesión | Registro -------- */
 
-function usuarioEstaRegistrado(usuarioNuevo) {
-    for(usuario of usuariosRegistrados) {
-        if(usuario === usuarioNuevo){
-            return true
-        }
-    }
-    return false
+function usuarioEstaRegistrado(mail) {
+    estaUsuario = mailsUsuariosRegistrados.find(mail);
+    let vacio = [];
+    return(!(estaUsuario === vacio));
 }
 
-function seleccionarPaisResidencia() {
-    pais = promt("Ingrese su país de residencia: ");
-    pais = sacarTildes(pais);
-
-    if(esPaisValido(pais)){
-        return retornarIndicePais(pais);
-    }
-
+function registrarse(nombre, apellido, pais, password, mail){
+    let nuevoUsuario = new Usuario(nombre, apellido, pais, password, mail);
+    usuariosRegistrados.push(nuevoUsuario)
+    mailsUsuariosRegistrados.push(mail);
+    usuarioActual = nuevoUsuario;
 }
 
-function crearUsuario() {
-    let nombre = prompt("Ingrese su nombre: ");
-    let apellido = prompt("Ingrese su apellido: ");
-    let pais = seleccionarPais()
-
-}
-
-let registrarUsuario = usuarioIngresado => usuariosRegistrados.unshift(usuarioIngresado);
-
-function ingresarPerfil() {
-    let eleccionUsuario = prompt("Bienvenido a TempoClock, el conversor de horarios que te permitirá organizarte a nivel internacional. Para continuar con su perfil, escriba 'Iniciar sesión'. En caso de que no tenga una cuenta creada, escriba 'Registrarse'.")
-
-    while( sacarTildes(eleccionUsuario).toLowerCase() != inicio || sacarTildes(eleccionUsuario).toLowerCase() != registro) {
-        eleccionUsuario = prompt ("Opción inválida. Por favor, ingrese 'Iniciar sesión' para ingresar a su cuenta, o 'Registrarse' para crear una nueva cuenta.")
-    }
-
-    if(sacarTildes(eleccionUsuario).toLowerCase() === inicio){
-        iniciarUsuario(eleccionUsuario)
-    }else {
-        registrarUsuario(eleccionUsuario)
-        iniciarUsuario(eleccionUsuario)
-    }
-
-}
-
-
-
-
-/* ------ Funcionamiento: Calcular horas -------- */
-
-function devolverStringHoraActual(pais) {
-
-}
-
-
-
-/* ------ PROGRAMA ------ */
-
-// function main() {
+function iniciarSesion(mail, password){
     
-//     let opcionIngresadaUsuario
-
-//     let nuevoComando = true
-//     let paisSeleccionado1
-//     let paisSeleccionado2
-//     let husoHorarioSeleccionado
-
-//     alert ("Bienvenido al Conversor de horarios TempoClock.")
-
-//     do {
-//         opcionIngresadaUsuario = prompt("Para ver una lista de feriados por pais, por favor introduzca la palabra 'feriado'. Para saber que huso horario es un país, introduzca la palabra 'huso'. Si desea salir del programa, ingrese la palabra 'salir'. Otras funciones del programa se encuentran en desarrollo.  Por favor, aguardar a una siguiente instancia de entrega para probar las demás funcionalidades.")
-//         while(opcionIngresadaUsuario != "feriado" && opcionIngresadaUsuario != "huso" && opcionIngresadaUsuario != "salir") {
-//             opcionIngresadaUsuario = prompt("Para ver una lista de feriados por pais, por favor introduzca la palabra 'feriado'. Para saber que huso horario es un país, introduzca la palabra 'huso'. Si desea salir del programa, ingrese la palabra 'salir'.")
-//         }
-//         switch(opcionIngresadaUsuario){
-//             case "feriado":
-//                 paisSeleccionado1 = solicitarUnPais();
-//                 alert(paisSeleccionado1.feriados);
-//                 nuevoComando = confirm("Desea realizar otra operación?")
-//                 break;
-//             case "huso":
-//                 paisSeleccionado2 = solicitarUnPais();
-//                 husoHorarioSeleccionado = paisSeleccionado2.husoHorario
-//                 alert(husoHorarioSeleccionado.huso);
-//                 nuevoComando = confirm("Desea realizar otra operación?")
-//                 break;
-//             default:
-//                 nuevoComando = false;
-//                 break;
-//         }
-//     } while(nuevoComando)
-
-//         alert("Muchas gracias por usar TempoClock. Vuelva pronto!")
-// }
-
-// main()
+    if(!usuarioEstaRegistrado(mail)){
+        alert("No existe usuario con el mail ingresado. Por favor, inicie sesión nuevamente o registrese en el sitio.");
+        return;
+    }
+    
+    let usuario = usuariosRegistrados.find((elem) => elem.mail === mail);
+    if (usuario.obtenerPassword() !== password) {
+        alert("La contraseña ingresada no es correcta. Intente nuevamente.")
+        return;
+    }   
+    usuarioActual = usuario;
+}
