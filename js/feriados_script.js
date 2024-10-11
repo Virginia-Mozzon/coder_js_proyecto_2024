@@ -32,5 +32,7 @@ let mostrarPaisUsuario = function(){
 
 
 boton.addEventListener("click",mostrarPaisUsuario);
-
+boton.addEventListener("submit", function(event) { 
+    event.preventDefault(); 
+  }); 
 
