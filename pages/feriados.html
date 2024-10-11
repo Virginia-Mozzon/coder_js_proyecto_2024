@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--Pestaña del navegador-->
+        <title>TempoClock | Conversor de horarios</title>
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"> <!--favicon-->
+
+        <!--meta description-->
+        <meta name="description" content="Conversor de husos horarios entre países que incluye calendario de feriados y días no laborales y horario actual de cada país">
+        <meta name="keywords" content="husos horarios, reloj, feriados, hora, tiempo, país, conversor">
+
+        <!--CSS-->
+        <link rel="stylesheet" href="../css/estilos.css">
+
+        <!--Javascript-->
+        <script defer type="module" src="../js/paises.js"></script>
+        <script defer type="module" src="../js/sesion.js"></script>
+        <script defer type="module" src="../js/feriados_script.js"></script>
+
+        
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div>
+                    <!--Navegación-->
+                    <ul>
+                        <li><a href="../index.html">INICIO</a></li>
+                        <li><a href="./conversor.html">CONVERSOR</a></li>
+                        <li><a href="./feriados.html">FERIADOS</a></li></li>
+                        <li><a href="./mi_huso_horario.html">MI HUSO HORARIO</a></li></li>
+                        <li><a href="./mi_perfil.html">MI PERFIL</a></li></li>                      
+                </div>
+            </nav>
+        </header>
+
+        <main id="mainFeriados">
+
+        
+        <h1>Feriados</h1>
+        <p>Seleccione el país del cual desea obtener su lista de feriados.</p>
+        <div>
+            <form action="#">
+                <select required class="seleccionarPais" name="País 3" id="pais3">
+
+                </select>
+                <input type="submit" id="obtenerFeriados" value="Obtener feriados">
+            </form>            
+        </div>
+
+        </main>
+
+        <footer>
+        <!--FOOTER-->
+        <ul>
+            <li><a href="../index.html">INICIO</a></li>
+            <li><a class="linkFooter" href="./mi_perfil.html">Mi perfil</a></li>
+        </ul>            
+        </footer>
+    </body>
+</html>
