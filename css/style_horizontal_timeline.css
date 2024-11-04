@@ -1,0 +1,142 @@
+section {
+    height: 50vh;
+    p {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1rem;
+    }
+}
+
+.container{
+    width: 100%;
+    
+}
+
+.timeline {
+    width: 72%;
+    margin: 0 auto;
+    position: relative;
+    perspective: 5000px;
+}
+.timeline:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 20px;
+    background-color: #d5dfe5;
+    border-radius: 15px;
+    top: 76px;
+}
+.timeline .timeline-item {
+    /* text-align: center; */
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+.timeline .timeline-item:hover:after {
+    transform: scale(1.5, 1.5);
+}
+.timeline .timeline-item.selected:after {
+    background-color: #023049;
+    border: 5px solid #659BBC;
+    transform: scale(1.2, 1.2);
+}
+.timeline .timeline-item:after {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 69px;
+    left: 50%;
+    margin-left: -15px;
+    background-color: #f5efed;
+    border: 5px solid #d5dfe5;
+    content: "";
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+
+
+/* ------------------ TEXTO EMERGENTE ------------------ */
+.timeline .timeline-item .timeline-content {
+    text-align: left;
+    position: absolute;
+    top: 100px;
+    display: none;
+    width: 300px;
+    left: -60px;
+    cursor: auto;
+}
+.timeline .timeline-item .timeline-content.fadeIn {
+    animation-delay: 0.2s;
+}
+.timeline .timeline-item .timeline-content.animated {
+    display: block;
+}
+  
+
+
+
+/* ------------------ ITEMS LINEA TIEMPO ------------------ */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+.flex-items-default {
+    width: 90px;
+    height: 100px;
+}
+  
+
+/* ------------------ VENTANA EMERGENTE ------------------ */
+.dropdown {
+    width: 340px;
+    height: 150px;
+    background: white;
+    box-shadow: 0 3px 20px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: absolute;
+    top: 130px;
+    animation-duration: 0.2s;
+    transition: left 0.3s ease;
+}
+.dropdown .inner {
+    position: relative;
+    width: 50%;
+    height: 10px;
+}
+
+
+/* .dropdown .inner .arrow-down {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    margin-left: -20px;
+}
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid white;
+} */
+  
+
+
+/* ------------------ nose que animaciones son ------------------ */  
+  .animated {
+    display: block;
+  }
+  
+ .material-icons {
+    position: absolute;
+    top: 189px;
+    left: 160px;
+    width: 10%;
+    color: white;
+    font-size: 33px;
+  } 
+  

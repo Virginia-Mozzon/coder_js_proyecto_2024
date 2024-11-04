@@ -1,0 +1,337 @@
+/* ------ Fuente -----*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Monserrat', sans-serif;
+}
+
+
+/* ----------- INDEX -----------*/
+
+header{
+    background-color: #023049;
+    position: sticky;
+    top:0;
+    z-index: 1000;
+    nav{
+        width: 40%;
+        margin: 0 auto;
+        padding: 20px 0;
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            li {
+                a{
+                    color: #FDF3D7;
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                }
+                .botonNav {
+                    font-weight: 100;
+                    font-size: 1.2rem;
+                    margin: 0 50px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    border-right: 2px solid #FDF3D7;
+                    border-left: 2px solid #FDF3D7;
+                }
+                .botonNav:hover{
+                    background-color: #FDF3D7;
+                    color: #023049;
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+main {
+    .hidden{
+        display: none;
+    }
+
+    #feriados2024{
+        font-size: 5rem;
+        font-weight: 900;
+        padding: 0;
+        margin: 0;
+    }
+    #feriadosRespuesta{
+        width: 100vw;
+    }
+
+    .tituloMes{
+        margin-top: 15px;
+        font-size: 1.5rem;
+        font-weight: 900;
+        padding-top: 25px;
+    }
+    .elementoTextoFeriado{
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+    }
+    #feriadosPais{
+        padding: 0;
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 600;
+        padding: 15px;
+    }
+
+    #contenedorSubtituloReset{
+        display: flex;
+        justify-content: center;
+    }
+
+    .seccionesIndexTitulo{
+        font-size: 5rem;
+        font-weight: 900;
+        padding: 25px;
+    }
+    p{
+        padding-bottom: 15px;
+        font-size: 1.2rem;
+    }
+
+    input{
+        background-color: aliceblue;
+        border: 2px solid #dbd7d7;
+        border-radius: 20px 20px 20px 20px;
+        width: 50%;
+        height: 30px;
+        margin: 20px;
+        padding: 20px 0;
+        padding-left: 20px;
+        color: #023049;
+        box-shadow: -5px 3px 20px 6px rgba(0,0,0,0.16);
+        font-size: 1.2rem;
+        ::placeholder {
+            color: gray;
+        }
+    }
+    button{
+        padding: 10px;
+        margin: 30px 0;
+        border-radius: 200px 200px 200px 200px;
+        box-shadow: -5px 3px 20px 6px rgba(0,0,0,0.16);
+    }
+
+    .introIndex{
+        background-color: #C22126;
+        align-items: center;
+        text-align: center;
+        h1{
+            padding: 25px;
+            padding-bottom: 10px;
+            font-size: 7rem;
+            font-weight: 900;
+            color:#FDF3D7;
+        }
+        p{
+            width: 70%;
+            margin: 0 auto;
+            color:#fefefd;
+            font-weight: 200;
+            font-size: 1.2rem;
+        }
+    }
+    
+    .feriadosIndex{
+        align-items: center;
+        text-align: center;
+        background-color: #FDF3D7;
+        color: #023049;
+        button{
+            background-color: #023049;
+            i{color: #659BBC;}
+        }
+        button:hover{
+            background-color: #659BBC;
+            i{color: #023049;}
+        }
+        
+    }
+
+    .husoHorarioIndex {
+        width: 100vw;
+    }
+
+    #husoRespuesta{
+        width: 65vw;
+
+
+        #chartdiv {
+            background-color: #FDF3D7;
+            width: 100%;
+            height: 400px;
+            padding: 15px;
+        }
+        }
+    }
+
+    .husoHorarioIndex{
+        background-color: #659BBC;
+        align-items: center;
+        text-align: center;
+        color: #FDF3D7;
+        h2{
+            font-size: 4rem;
+            font-weight: 900;
+            color: #023049;
+            padding-top: 0;
+            margin: 0;
+        }
+        #hora{
+            font-size: 2.5rem;
+            font-weight: 500;
+            padding: 0;
+        }
+        #fechaPaisHH{
+            font-size: 1rem;
+            padding: 0;
+            padding-bottom: 20px;
+        }
+        button{
+            background-color: #023049;
+            i{color: #FDF3D7;}
+        }
+        button:hover{
+            background-color: #FDF3D7;
+            i{color: #023049;}
+        }
+        #contenedorhoraHuso{
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            p{
+                padding-left: 25px;
+            }
+            button{
+                margin: 0 15px;
+            }
+        }
+    }
+    .conversorTiempo{
+        background-color: #761112;
+        align-items: center;
+        text-align: center;
+        color: #FDF3D7;
+        h2{
+            color: #FDF3D7;
+        }
+        .inputConversor{
+            width: 30%; 
+        }
+        button{
+            background-color: #659BBC;
+            i{color: #023049;}
+        }
+        button:hover{
+            background-color: #023049;
+            i{color: #659BBC;}
+        }
+        
+        #contenedorhorasConversor{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            .horaPais{
+                margin: 0 auto;
+                padding: 25px;
+                h2{
+                    font-size: 3rem;
+                    font-weight: 900;
+                }
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 100;
+                }
+            }
+        }
+        #grilla{
+            .franja {
+                display: flex;
+                flex-direction: row;
+                margin: 15px;
+                margin-bottom: 10px;
+                justify-content: space-between;
+                h3{
+                    color: #FDF3D7;
+                    padding: 15px 25px;
+                    font-size: 2rem;
+                }
+                .grillaHoras {
+                    background-color: #FDF3D7;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    .horaGrilla{
+                        color: #659BBC;
+                        padding: 5px;
+                        height: 100%;
+                        align-content: center;
+                    }
+                    .horaGrillaResaltada{
+                        color: #023049;
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                        background-color: #659BBC;
+                        padding: 10px;
+                    }
+
+                }
+            }
+        }
+        #baseConversor{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            #difHoras{
+                margin: 15px;
+            }
+        }
+    }
+
+
+footer{
+    background-color: #023049;
+
+    ul {
+        width: 20%;
+        margin: 0 auto;
+        padding: 15px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+        li{
+            a {
+                color: #FDF3D7;
+                font-weight: 700;
+                padding-left: 10px;
+            }
+            .logoPag {
+                padding-right: 25px;
+                border-right: 2px solid #FDF3D7;
+            }
+        }
+    }
+}

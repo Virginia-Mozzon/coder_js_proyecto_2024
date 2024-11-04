@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "fullpage.js": "^4.0.30",
+    "luxon": "^3.5.0"
+  }
+}

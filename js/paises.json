@@ -1,0 +1,270 @@
+{ "paises":[{
+    "nombrePais": "Afganistán",
+    "unicode": "af.webp",
+    "factorSumador": 4.50,
+    "husoHorario": "UTC+4:30",
+    "feriados" : [ "15/02 - Día de la Liberación de Afganistán", "11/03 - Inicio del Ramadán", "20/03 y 21/03 - Nowruz, Año nuevo persa", "10/04 - Fiesta de la ruptura del ayuno (Eid al-Fitr)", "27/04 - Día de la Victoria de los Muyahidín", "01/05 - Día Internacional de los Trabajadores", "15/06 - Día del Arafah", "16/06 - Fiesta del Sacrificio (Eid al-Adha)", "16/07 - Día de Ashura", "18/08 - Día de la Independencia de Afganistán", "15/09 - Nacimiento del profeta (Mawlid)" ]
+},
+{
+    "nombrePais": "Albania",
+    "unicode": "al.webp",
+    "factorSumador": 1,
+    "husoHorario": "UTC+1",
+    "feriados": ["01/01 - Año Nuevo","14/03 - Día de verano","22/03 - Año nuevo persa","01/05 - Día Internacional de los Trabajadores","10/04 - Fiesta de la ruptura del ayuno (Eid al-Fitr)","16/06 - Fiesta del Sacrificio (Eid al-Adha)","19/10 - Día de Beatificación de la Madre Teresa","28/11 - Día de la Bandera y de la Independencia","29/11 - Día de la Liberación","8/12 - Día Nacional de la Juventud","25/12 - Navidad"]
+},
+{
+    "nombrePais" : "Alemania",
+    "unicode": "de.webp",
+    "factorSumador": 1,
+    "husoHorario":"UTC+1",
+    "feriados": ["01/01 - Año Nuevo, Neujahr","06/01 -  Epifanía (fiesta regional en Baviera, Baden-Württemberg y Sajonia-Anhalt)","08/03 - Día Internacional de la Mujer (Weltfrauentag)","29/03 - Viernes Santo (Karfreitag)","01/04 - Lunes de Pascua (Ostermontag)","01/05 - Día Internacional de los Trabajadores (Tag der Arbeit)","09/05 - Día de la Ascensión (Christi Himmelfahrt)","20/05 - Lunes de Pentecostés (Pfingstmontag)","30/05 - Corpus Christi (Fronleichnam)","01/06 - Weltkindertag","08/08 - Fiesta de la Paz de Augsburgo (Augsburger Friedensfest)","15/08 - Día de la Inmaculada Concepción (Mariä Himmelfahrt)","03/10 - Día de la unidad alemana (Tag der Deutschen Einheit)","31/10 - Día de la reforma (Reformationstag)","01/11 - Día de todos los santos (Allerheiligen)","20/11 - Día de penitencia y oración. Fiesta regional","25/12 - Navidad (Weihnachtstag)","26/12 - Segundo día de Navidad (Weihnachtstag)"
+    ]
+
+},
+{
+    "nombrePais": "Andorra",
+    "unicode": "ad.webp",
+    "factorSumador": 1,
+    "husoHorario":"UTC+1",
+    "feriados": [ "01/01 - Año Nuevo","06/01 -  Epifanía (fiesta regional en Baviera, Baden-Württemberg y Sajonia-Anhalt)","09/02 - Carnaval","12/02 - Carnaval","13/02 - Carnaval","14/03 - Día de la Constitución","01/05 - Día Internacional de los Trabajadores","15/08 - Asunción de María","08/09 - Día de Meritxell","01/11 - Día de todos los santos","08/12 - Inmaculada Concepción","25/12 - Navidad","26/12 - Día de San Esteban"]
+},
+{
+    "nombrePais": "Angola",
+    "unicode": "ao.webp",
+    "factorSumador": 1,
+    "husoHorario":"UTC+1",
+    "feriados": ["01/01 - Año Nuevo","04/02 - Día por el movimiento de la Liberación","12/02 - Carnaval","08/03 - Día Internacional de la Mujer","29/03 - Viernes Santo","04/04 - Día de la Paz","01/05 - Día Internacional de los Trabajadores","17/09 - Día de los Héroes Nacionales","02/11 - Día de la memoria","11/11 - Día de la Independencia","25/12 - Navidad"]
+},
+{
+    "nombrePais": "Antigua y Barbuda",
+    "unicode": "ag.webp",
+    "factorSumador": -4,
+    "husoHorario": "UTC-4",
+    "feriados": ["01/01 - Año Nuevo","29/03 - Viernes Santo","01/04 - Pascua","06/05 - Día Internacional de los Trabajadores","20/05 - Día de la Ascención","05/08 - Carnaval","06/08 - Carnaval","01/11 - Día de la Independencia","09/12 - Día de V.C. Bird","25/12 - Navidad","26/12 - Segundo día de Navidad"]
+},
+{
+    "nombrePais": "Arabia Saudita",
+    "unicode": "sa.webp",
+    "factorSumador": 3,
+    "husoHorario": "UTC+3",
+    "feriados": ["01/01 - Año Nuevo","22/02 - Fundación Reino De Arabia Saudí","09/04 - Eid Al Fitr","10/04 - Eid Al Fitr","11/04 - Eid Al Fitr","01/05 - Día Internacional de los Trabajadores","23/09 - Fiesta National De Saudi Arabia"]
+}, 
+{
+    "nombrePais": "Argelia",
+    "unicode": "dz.webp",
+    "factorSumador": 1,
+    "husoHorario":"UTC+1",
+    "feriados": ["01/01 - Año Nuevo","10/04 - Eid Al Fitr","01/05 - Día Internacional de los Trabajadores","17/06 - Fiesta islámica del sacrificio","05/07 - Día de la Independencia","08/07 - Año Nuevo Islámico","16/07 - Ashura","16/09 - Cumpleaños del profeta","01/11 - Día de la Revolución"]
+},
+{
+    "nombrePais": "Argentina",
+    "unicode": "ar.webp",
+    "factorSumador": -3,
+    "husoHorario": "UTC-3",
+    "feriados": ["01/01 - Año Nuevo","12/02 - Carnaval","13/02 - Carnaval","24/03 - Día Nacional de la Memoria por la Verdad y la Justicia","29/03 - Viernes Santo","02/04 - Día del Veterano y de los Caídos en la Guerra de Malvinas","01/05 - Día Internacional de los Trabajadores","25/05 - Día de la Revolución de Mayo","17/06 - Paso a la Inmortalidad del Gral. Don Martín Miguel de Güemes","20/06 - Paso a la Inmortalidad del Gral. Manuel Belgrano","09/07 - Día de la Independencia","17/08 - Paso a la Inmortalidad del Gral. José de San Martín","12/10 - Día de la Raza","20/11 - Día de la Soberanía Nacional","08/12 - Inmaculada Concepción","25/12 - Navidad"]
+},
+{
+    "nombrePais": "Argentina - Mendoza",
+    "unicode": "ar.webp",
+    "factorSumador": -7,
+    "husoHorario": "UTC-7",
+    "feriados": ["01/01 - Año Nuevo","12/02 - Carnaval","13/02 - Carnaval","24/03 - Día Nacional de la Memoria por la Verdad y la Justicia","29/03 - Viernes Santo","02/04 - Día del Veterano y de los Caídos en la Guerra de Malvinas","01/05 - Día Internacional de los Trabajadores","25/05 - Día de la Revolución de Mayo","17/06 - Paso a la Inmortalidad del Gral. Don Martín Miguel de Güemes","20/06 - Paso a la Inmortalidad del Gral. Manuel Belgrano","09/07 - Día de la Independencia","17/08 - Paso a la Inmortalidad del Gral. José de San Martín","12/10 - Día de la Raza","20/11 - Día de la Soberanía Nacional","08/12 - Inmaculada Concepción","25/12 - Navidad"]
+},
+{
+    "nombrePais": "Armenia",
+    "unicode": "am.webp",
+    "factorSumador": 4,
+    "husoHorario": "UTC+4",
+    "feriados": ["01/01 - Año Nuevo","02/01 - Año Nuevo","06/01 - Navidad","28/01 - Día Nacional de la Armada","08/03 - Día Internacional de la Mujer","24/04 - Día Conmemorativo del Genocidio","01/05 - Día Internacional de los Trabajadores","09/01 - Día de la Victoria","28/05 - Día de la Primera República","05/07 - Día de la Constitución","15/09 - Día de la Exaltación de la Sagrada Cruz","21/09 - Día de la Independencia","31/12 - Año Nuevo"]
+},
+{
+    "nombrePais": "Australia - Sydney",
+    "unicode": "au.webp",
+    "factorSumador": 3,
+    "husoHorario": "UTC+3",
+    "feriados": ["01/01 - Año Nuevo","26/01 - Día de Australia","11/03 - Cía de Canberra","29/03 - Viernes Santo","30/03 - Sábado Santo","31/03 - Pascuas","01/04 - Lunes de Pascua","25/04 - Día de Anzac","27/05 - Día de la Reconciliación","10/06 - Celebración del Cumpleaños del Rey","25/12 - Navidad","26/12 - Segundo día de Navidad"]
+},
+{
+    "nombrePais": "Australia - Melbourne",
+    "unicode": "au.webp",
+    "factorSumador": 3,
+    "husoHorario": "UTC+11",
+    "feriados": ["01/01 - Año Nuevo","26/01 - Día de Australia","11/03 - Cía de Canberra","29/03 - Viernes Santo","30/03 - Sábado Santo","31/03 - Pascuas","01/04 - Lunes de Pascua","25/04 - Día de Anzac","27/05 - Día de la Reconciliación","10/06 - Celebración del Cumpleaños del Rey","25/12 - Navidad","26/12 - Segundo día de Navidad"]
+},
+{
+    "nombrePais": "Australia - Australia Occidental",
+    "unicode": "au.webp",
+    "factorSumador": 8,
+    "husoHorario": "UTC+8",
+    "feriados": ["01/01 - Año Nuevo","26/01 - Día de Australia","11/03 - Cía de Canberra","29/03 - Viernes Santo","30/03 - Sábado Santo","31/03 - Pascuas","01/04 - Lunes de Pascua","25/04 - Día de Anzac","27/05 - Día de la Reconciliación","10/06 - Celebración del Cumpleaños del Rey","25/12 - Navidad","26/12 - Segundo día de Navidad"]
+},
+{
+    "nombrePais": "Australia - Australia del Sur",
+    "unicode": "au.webp",
+    "factorSumador": 9.5,
+    "husoHorario": "UTC+9:30",
+    "feriados": ["01/01 - Año Nuevo","26/01 - Día de Australia","11/03 - Cía de Canberra","29/03 - Viernes Santo","30/03 - Sábado Santo","31/03 - Pascuas","01/04 - Lunes de Pascua","25/04 - Día de Anzac","27/05 - Día de la Reconciliación","10/06 - Celebración del Cumpleaños del Rey","25/12 - Navidad","26/12 - Segundo día de Navidad"]
+},
+{
+    "nombrePais": "Australia - Territorio del Norte",
+    "unicode": "au.webp",
+    "factorSumador": 9.5,
+    "husoHorario": "UTC+9:30",
+    "feriados": ["01/01 - Año Nuevo","26/01 - Día de Australia","11/03 - Cía de Canberra","29/03 - Viernes Santo","30/03 - Sábado Santo","31/03 - Pascuas","01/04 - Lunes de Pascua","25/04 - Día de Anzac","27/05 - Día de la Reconciliación","10/06 - Celebración del Cumpleaños del Rey","25/12 - Navidad","26/12 - Segundo día de Navidad"]
+},
+{
+    "nombrePais": "Australia - Nueva Gales del Sur",
+    "unicode": "au.webp",
+    "factorSumador": 10,
+    "husoHorario": "UTC+10",
+    "feriados": ["01/01 - Año Nuevo","26/01 - Día de Australia","11/03 - Cía de Canberra","29/03 - Viernes Santo","30/03 - Sábado Santo","31/03 - Pascuas","01/04 - Lunes de Pascua","25/04 - Día de Anzac","27/05 - Día de la Reconciliación","10/06 - Celebración del Cumpleaños del Rey","25/12 - Navidad","26/12 - Segundo día de Navidad"]
+},
+{
+    "nombrePais": "Australia - Queensland",
+    "unicode": "au.webp",
+    "factorSumador": 10,
+    "husoHorario": "UTC+10",
+    "feriados": ["01/01 - Año Nuevo","26/01 - Día de Australia","11/03 - Cía de Canberra","29/03 - Viernes Santo","30/03 - Sábado Santo","31/03 - Pascuas","01/04 - Lunes de Pascua","25/04 - Día de Anzac","27/05 - Día de la Reconciliación","10/06 - Celebración del Cumpleaños del Rey","25/12 - Navidad","26/12 - Segundo día de Navidad"]
+},
+{
+    "nombrePais": "Austria",
+    "unicode": "at.webp",
+    "factorSumador": 1,
+    "husoHorario":"UTC+1",
+    "feriados": ["01/01 - Año Nuevo","06/01 - Día de Reyes","01/04 - Lunes de Pascua","01/05 - Día Festivo Estatal","09/05 - Ascensión del Señor","20/05 - Lunes de Pentecostés","30/05 - Día del Corpus","15/08 - Día de la Asunción","26/10 - Día festivo nacional","01/11 - Día de todos los santos","08/12 - Inmaculada Concepción","25/12 - Navidad", "26/12 - Día de Estefanía"]
+},
+{
+    "nombrePais": "Azerbaiyán",
+    "unicode": "az.webp",
+    "factorSumador": 4,
+    "husoHorario":"UTC+4",
+    "feriados": ["01/01 - Año Nuevo","20/01 - Día de los Mártires","08/03 - Día Internacional de la Mujer","20/03 y 21/03 - Nowruz, Año nuevo persa","09/05 - Día de la Victoria","09/04 - Ramazan Bayrami","28/05 - Día de la República","15/06 - Día de la Salvación Nacional","16/06 - Gurban Bayrami (Banquete del Sacrificio)","26/06 - Día de la Fuerzas Armadas","18/10 - Día de la Independencia","09/11 - Día de la Bandera Nacional","12/11 - Día de la Constitución","31/12 - Día Internacional de la Solidaridad de los Azerbaiyanos"]
+},
+{
+    "nombrePais": "Bahamas",
+    "unicode": "bs.webp",
+    "factorSumador": -5,
+    "husoHorario":"UTC-5",
+    "feriados": ["01/01 - Año Nuevo","10/01 - Majority Tule Day","14/02 - Día de San Valentín","18/04 - Viernes Santo","20/04 - Pascua","21/04 - Lunes de Pascua","11/05 - Día de la Madre", "06/06 - Día del Trabajador","08/06 - Domingo de Pentecostés","09/06 - Lunes de Pentecostés", "15/06 - Día del Padre","10/07 - Día de la Independencia", "04/08 Día de la Emancipación", "13/10 - Día de los héroes","24/12 - Noche Buena", "25/12 - Navidad", "26/12 - Día de San Esteban", "31/12 - Noche Vieja"
+    ]
+},
+{
+    "nombrePais": "Bangladés",
+    "unicode": "bd.webp",
+    "factorSumador": 6,
+    "husoHorario": "UTC+6",
+    "feriados":["01/01 - Año Nuevo", "21/02 - Día Internacional de la Lengua Materna","26/02 - Shab-e-Barat", "17/03 - Aniversario del Padre de la nacion y Día nacional de la Juventud", "26/03-Día de la Independencia", "05/04 - Jumatul Bida", "07/04 - Shab-e-Qadar", "10/04 - Eid-ul-Fitr", "11/04 - Eid Al Fitr", "14/04 - Año Nuevo Bangla","12/04 - Eid-ul-Fitr", "01/05 - Día Internacional de los Trabajadores", "09/05 - Día de la Ascensión","22/05 - Buddha Purnima","17/07 - Ashura","16/12 - Día de la Victoria", "25/12 - Navidad", "26/12 - Segundo día de Navidad"]
+},
+{
+    "nombrePais": "Barbados",
+    "unicode": "bb.webp",
+    "factorSumador": -4,
+    "husoHorario":"UTC-4",
+    "feriados": ["01/01 - Año Nuevo", "21/02 - Día de la Juventud","28/04 - Día de los héroes", "01/05 - Día Internacional de los Trabajadores","01/08 - Día de la Emancipación", "05/08 - Día de Kadooment", "30/11 - Día de la Independencia", "25/12 - Navidad", "26/12 - Día de San Esteban"]
+},
+{
+    "nombrePais": "Baréin",
+    "unicode": "bh.webp",
+    "factorSumador": 3,
+    "husoHorario":"UTC+3",
+    "feriados": ["01/01 - Año Nuevo", "10/04 - Eid Al Fitr", "11/04 - Eid Al Fitr", "12/04 - Eid Al Fitr", "01/05 - Día Internacional de los Trabajadores", "16/06 - Arafat", "17/06 - Eid al-Adha", "18/06 - Eid al-Adha", "19/06 - Eid al-Adha","08/07 - Muharram", "17/07 - Ashura", "18/07 - Ashura", "16/09 - Cumpleaños del profeta", "16/12 - Día Nacional", "17/12 - Día Nacional"]
+},
+{
+    "nombrePais": "Bélgica",
+    "unicode": "be.webp",
+    "factorSumador": 1,
+    "husoHorario":"UTC+1",
+    "feriados": ["01/01 - Año Nuevo", "31/03 - Pascuas", "01/04 - Pascua", "01/05 - Día Internacional de los Trabajadores", "09/05 - Día de la Ascensión", "19/05 - Domingo de Pentecostés", "20/05 - Lunes de Pentecostés", "21/07 - Fiesta Nacional", "15/08 - Día de la Asunción", "01/11 - Día de todos los santos", "11/11 - Armisticio", "25/12 - Navidad"]
+},
+{
+    "nombrePais": "Belice",
+    "unicode": "bz.webp",
+    "factorSumador": -6,
+    "husoHorario": "UTC-6",
+    "feriados": ["01/01 - Año Nuevo", "09/03 - Día del Barón Bliss", "29/03 - Viernes Santo", "31/03 - Pascuas", "01/04 - Lunes de Pascua", "01/05 - Día Internacional de los Trabajadores", "27/05 - Día de la Mancomunidad", "10/09 - Batalla de St. George's Caye", "21/09 - Día de la Independencia", "14/10 - Día de la raza", "19/11 - Día del Asentamiento Garifuna", "25/12 - Navidad", "26/12 - Día de San Esteban"]
+},
+{
+    "nombrePais": "Benín",
+    "unicode": "bj.webp",
+    "factorSumador": 1,
+    "husoHorario": "UTC+1",
+    "feriados": ["01/01 - Año Nuevo", "10/01 - Festival Vodoun", "31/03 - Pascuas", "01/04 - Lunes de Pascua", "10/04 - Eid Al Fitr", "01/05 - Día Internacional de los Trabajadores", "09/05 - Día de la Ascensión", "20/05 - Lunes de Pentecostés", "01/08 - Día de la Independencia", "15/08 - Día de la Asunción", "16/09 - Cumpleaños del profeta", "01/11 - Día de todos los santos", "25/12 - Navidad"]
+},
+{
+    "nombrePais": "Bielorrusia",
+    "unicode": "by.webp",
+    "factorSumador": 3,
+    "husoHorario": "UTC+3",
+    "feriados": ["01/01 - Año Nuevo", "08/03 - Día Internacional de la Mujer","15/03 - Día de la Constitución", "02/04 - Día de la Unión entre Rusia y Bielorrusia", "09/05 - Día de la Victoria", "03/07 - Día de la Independencia de la República de Bielorrusia", "07/11 - Día de la Revolución de Octubre", "25/12 - Navidad"]
+},
+{
+    "nombrePais": "Myanmar (Birmania)",
+    "unicode": "mm.webp",
+    "factorSumador": 6.5,
+    "husoHorario": "UTC+6:30",
+    "feriados":["01/01 - Año Nuevo", "04/01 - Día de la Independencia", "06/06 - Año Nuevo de Kayin", "12/02 - Día de la Unión", "02/03 - Día de los campesinos", "20/03 - Día de la Luna Llena de Tabaung", "27/03 - Día de las Fuerzas Armadas", "13/04 - Festival del Agua de Thingyan", "14/04 - Festival del Agua de Thingyan", "15/04 - Festival del Agua de Thingyan", "16/04 - Festival del Agua de Thingyan", "17/04 - Festival del Agua de Thingyan", "01/05 - Día Internacional de los Trabajadores", "18/05 - Día de la Luna Llena de Kasone", "16/07 - Día de la Luna Llena de Waso", "19/07 - Día de los mártires", "12/10 - Día de la Luna Llena de Thadingyut", "10/11 - Día de la Luna Llena deTazaungmone", "21/11 - Día Nacional", "25/12 - Navidad", "26/12 - Año Nuevo de Kayin", "31/12 - Noche Vieja"]
+},
+{
+    "nombrePais": "Bolivia",
+    "unicode": "bo.webp",
+    "factorSumador": -4,
+    "husoHorario": "UTC-4",
+    "feriados": ["01/01 - Año Nuevo", "06/01 - Día de Reyes", "22/01 - Fundación del Estado Plurinacional", "02/02 - Fiesta de la Candelaria", "12/02 - Carnaval", "13/02 - Carnaval", "19/03 - Día del Padre", "23/03 - Día de la Reinvindicación Marítima", "28/03 - Jueves Santo", "29/03 - Viernes Santo", "12/04 - Día del niño", "01/05 - Día Internacional de los Trabajadores", "27/05 - Día de la Madre", "30/05 - Día del Corpus", "21/06 - Año Nuevo Aymara", "06/08 - Día de la Independencia", "17/08 - Día de la Bandera", "11/10 - Día de la Mujer Boliviana", "12/10 - Día de la Descolonización", "17/10 - Día de la Dignidad Nacional", "02/11 - Día de Todos los Santos", "25/12 - Navidad"]
+},
+{
+    "nombrePais": "Bosnia y Herzegovina",
+    "unicode": "ba.webp",
+    "factorSumador": 1,
+    "husoHorario":"UTC+1",
+    "feriados": ["01/01 - Año Nuevo", "09/01 - Día de la República", "01/03 - Día de la Independencia", "08/03 - Día del distrito de Brcko y Día de la Madre", "18/04 - Viernes Santo", "20/04 - Pascua", "21/04 - Lunes de Pascua", "01/05 - Día Internacional de los Trabajadores", "09/05 - Día de la Victoria","01/06 - Día del Niño", "21/11 - Día del Acuerdo de Dayton", "25/11 - Día de la Fundación del Estado", "25/12 - Navidad","26/12 - Día de San Esteban"]
+},
+{
+    "nombrePais": "Botsuana",
+    "unicode": "bw.webp",
+    "factorSumador": 2,
+    "husoHorario":"UTC+2",
+    "feriados": ["01/01 - Año Nuevo", "29/03 - Viernes Santo", "01/04 - Lunes de Pascua", "01/05 - Día Internacional de los Trabajadores", "09/05 - Día de la Ascensión","01/07 - Sir Seretse Khama Day", "15/07 - Día del Presidente", "30/09 - Día de Botsuana", "25/12 - Navidad", "26/12 - Día de San Esteban"]
+},
+{
+    "nombrePais": "Brasil",
+    "unicode": "br.webp",
+    "factorSumador": -3,
+    "husoHorario":"UTC-3",
+    "feriados": ["01/01 - Año Nuevo", "12/02 - Carnaval", "13/02 - Carnaval", "14/02 - Miércoles de cenizas", "29/03 - Viernes Santo", "31/03 - Pascuas", "21/04 - Tiradentes", "01/05 - Día Internacional de los Trabajadores", "30/05 - Día del Corpus", "07/09 - Día de la Independencia", "12/10 - Día de Nuestra Señora Aparecida", "02/11 - Día de los Muertos", "15/11 - Proclamación de la República", "20/11 - Día Nacional de Zumbi y de la Consciencia Negra", "25/12 - Navidad"]
+},
+{
+    "nombrePais": "Brunéi",
+    "unicode": "bn.webp",
+    "factorSumador": 8,
+    "husoHorario": "UTC+8",
+    "feriados": ["01/01 - Año Nuevo", "23/02 - Día Nacional", "01/05 - Día Internacional de los Trabajadores", "07/07 - Día del Sultán", "25/12 - Navidad"]
+},
+{
+    "nombrePais": "Bulgaria",
+    "unicode": "bg.webp",
+    "factorSumador": 2,
+    "husoHorario":"UTC+2",
+    "feriados": ["01/01 - Año Nuevo", "03/03 - Día de la Liberación", "01/05 - Día Internacional de los Trabajadores", "06/05 - Día de San Jorge", "22/09 - Día de la Independencia", "25/12 - Navidad"]
+},
+{
+    "nombrePais": "Burkina Faso",
+    "unicode": "bf.webp",
+    "factorSumador": 0,
+    "husoHorario": "UTC+0",
+    "feriados": ["01/01 - Año Nuevo", "08/03 - Día Internacional de la Mujer", "04/08 - Día de la Revolución", "25/12 - Día de la Independencia"]
+},
+{
+    "nombrePais": "Burundi",
+    "unicode": "bi.webp",
+    "factorSumador": 2,
+    "husoHorario":"UTC+2",
+    "feriados": ["01/01 - Año Nuevo", "08/03 - Día Internacional de la Mujer", "01/05 - Día Internacional de los Trabajadores", "18/09 - Día de la Independencia", "25/12 - Navidad"]
+},
+{
+    "nombrePais": "Bután",
+    "unicode": "bt.webp",
+    "factorSumador": 6,
+    "husoHorario":"UTC+6",
+    "feriados": ["12/01 - Día tradicional de las ofrendas", "21/02 - Aniversario del nacimiento de Su Majestad el Rey", "18/04 - Zhabdrung Kuchoe (Aniversario de la muerte)", "02/05 - Aniversario del Nacimiento del Tercer Druk Gyalpo", "20/12 - Día de la Fundación"]
+}
+]}

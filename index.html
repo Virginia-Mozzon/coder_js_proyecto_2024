@@ -12,96 +12,319 @@
         <meta name="description" content="Conversor de husos horarios entre países que incluye calendario de feriados y días no laborales y horario actual de cada país">
         <meta name="keywords" content="husos horarios, reloj, feriados, hora, tiempo, país, conversor">
 
+        <!-- Iconos -->
+        <script src="https://kit.fontawesome.com/0aff6a0f35.js" crossorigin="anonymous"></script>
+
+        <!-- Libreria fullpage-->
+        <link rel="stylesheet" type="text/css" href="./node_modules/fullpage.js/dist/fullpage.css" />
+        <script type="text/javascript" src="./node_modules/fullpage.js/dist/fullpage.js"></script>
+
+        <!-- Luxon -->
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.5.0/build/global/luxon.min.js"></script>
+
+        <!-- Horizontal Timeline -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'> -->
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+        <link rel="stylesheet" href="./css/style_horizontal_timeline.css">
+        
         <!--CSS-->
         <link rel="stylesheet" href="./css/estilos.css">
 
+        
+
         <!--Javascript-->
-        <script defer src="./js/paises.js"></script>
-        <script defer src="./js/sesion.js"></script>
+        <script defer src="./js/script_index.js"></script>
+
+
     </head>
     <body>
         <header>
             <nav>
-                <div>
-                    <!--Navegación-->
-                    <ul>
-                        <li><a href="#">INICIO</a></li>
-                        <li><a href="./pages/conversor.html">CONVERSOR</a></li>
-                        <li><a href="./pages/feriados.html">FERIADOS</a></li>
-                        <li><a href="./pages/mi_huso_horario.html">MI HUSO HORARIO</a></li>
-                        <li><a id="miPerfil" href="./pages/mi_perfil.html">MI PERFIL</a></li>                      
-                </div>
+                <ul>
+                    <li><a class="botonNav" href="#">INICIO</a></li>
+                    <li><a href="#">TEMPO-CLOCK</a></li>
+                    <li><a class="botonNav" href="./pages/mi_perfil.html">PERFIL</a></li>
+                </ul>                      
             </nav>
         </header>
 
         <main>
+            <div id="fullpage">
+                <!------------ Introducción ------------>
+                <div class="section introIndex">
+                    <h1>TEMPO-CLOCK</h1>
+                    <p>El manejo del tiempo nunca fue más sencillo. Scrolleá para abajo y descubrí todas las funcionalidades disponibles.</p>
+                </div>
 
-        
-        <h1>Bienvenido a TempoClock</h1>
-        <div>
-            <p>Este conversor de horarios te permitirá organizar reuniones y llamadas de equipo entre personas de distintas partes del mundo.</p>
-            
-            <p>Vas a poder identificar el huso horario que tiene cada país, cuantas horas de diferencia hay entre países y obtener una lista de feriados/días no laborables por país.</p>
+                <!------------ Funcionalidad feriados ------------>
+                <div class="section feriadosIndex" id="feriadosSectContainer">
+                    <div id="feriadosIndex" class="feriadosIndex">
+                        <!-- Descripción -->
+                        <h2 class="seccionesIndexTitulo">Feriados por país</h2>
+                        <p>Seleccione en el siguiente espacio el país del cual desee obtener una lista de días no laborables.</p>
+                    
+                        <!-- Input País ingresado -->
+                        <div>
+                            <form action="#" type="submit">
+                                <input list="paises" name="pais" id="paisFeriados" placeholder="Ingrese un país" required>
+                                <!-- Lista de opciones -->
+                                <datalist id="paises">
+                                </datalist>
+                                <button id="botonFeriados"><i class="fa-solid fa-arrow-right fa-xl"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="feriadosRespuesta" class="hidden feriadosIndex">
+                        <h2 id="feriados2024">2024</h2>
+                        <div id="contenedorSubtituloReset">
+                            <h3 id="feriadosPais"></h3>
+                            <button id="resetFeriados" class="botonFeriados"><i class="fa-solid fa-rotate-right"></i></button>
+                        </div>
+                        <!-- partial:index.partial.html -->
+                        <section>
+                            <div class="container">
+                                <div class="timeline flex-container">
+                                    <div class="timeline-item flex-items-default selected">
+                                        <div class="timeline-content text-left animated bounceIn" id="enero">
+                                            <h2 class="tituloMes">ENERO</h2>
+                                            <div class="feriadosContainer">
+                                                <p class="elementoTextoFeriado noFeriado">Este mes no contiene ningún feriado.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="timeline-item flex-items-default">
+                                        <div class="timeline-content text-left" id="febrero">
+                                            <h2 class="tituloMes">FEBRERO</h2>
+                                            <div class="feriadosContainer">
+                                                <p class="elementoTextoFeriado noFeriado">Este mes no contiene ningún feriado.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item flex-items-default">
+                                        <div class="timeline-content text-left" id="marzo">
+                                            <h2 class="tituloMes">MARZO</h2>
+                                            <div class="feriadosContainer">
+                                                <p class="elementoTextoFeriado noFeriado">Este mes no contiene ningún feriado.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="timeline-item flex-items-default">
+                                        <div class="timeline-content text-left" id="abril">
+                                            <h2 class="tituloMes">ABRIL</h2>
+                                            <div class="feriadosContainer">
+                                                <p class="elementoTextoFeriado noFeriado">Este mes no contiene ningún feriado.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="timeline-item flex-items-default">
+                                        <div class="timeline-content text-left" id="mayo">
+                                            <h2 class="tituloMes">MAYO</h2>
+                                            <div class="feriadosContainer">
+                                                <p class="elementoTextoFeriado noFeriado">Este mes no contiene ningún feriado.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item flex-items-default">
+                                        <div class="timeline-content text-left" id="junio">
+                                            <h2 class="tituloMes">JUNIO</h2>
+                                            <div class="feriadosContainer">
+                                                <p class="elementoTextoFeriado noFeriado">Este mes no contiene ningún feriado.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item flex-items-default">
+                                        <div class="timeline-content text-left" id="julio">
+                                            <h2 class="tituloMes">JULIO</h2>
+                                            <div class="feriadosContainer">
+                                                <p class="elementoTextoFeriado noFeriado">Este mes no contiene ningún feriado.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item flex-items-default">
+                                        <div class="timeline-content text-left" id="agosto">
+                                            <h2 class="tituloMes">AGOSTO</h2>
+                                            <div class="feriadosContainer">
+                                                <p class="elementoTextoFeriado noFeriado">Este mes no contiene ningún feriado.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item flex-items-default">
+                                        <div class="timeline-content text-left" id="septiembre">
+                                            <h2 class="tituloMes">SEPTIEMBRE</h2>
+                                            <div class="feriadosContainer">
+                                                <p class="elementoTextoFeriado noFeriado">Este mes no contiene ningún feriado.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item flex-items-default">
+                                        <div class="timeline-content text-left" id="octubre">
+                                            <h2 class="tituloMes">OCTUBRE</h2>
+                                            <div class="feriadosContainer">
+                                                <p class="elementoTextoFeriado noFeriado">Este mes no contiene ningún feriado.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item flex-items-default">
+                                        <div class="timeline-content text-left" id="noviembre">
+                                            <h2 class="tituloMes">NOVIEMBRE</h2>
+                                            <div class="feriadosContainer">
+                                                <p class="elementoTextoFeriado noFeriado">Este mes no contiene ningún feriado.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item flex-items-default">
+                                        <div class="timeline-content text-left" id="diciembre">
+                                            <h2 class="tituloMes">DICIEMBRE</h2>
+                                            <div class="feriadosContainer">
+                                                <p class="elementoTextoFeriado noFeriado">Este mes no contiene ningún feriado.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="dropdown animated bounceIn" style="left: -88px;">
+                                        <div class="inner">
+                                        </div>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </section>
+                        <!-- partial -->
+                    </div>
+
+                </div>
+
+                <!------------ Funcionalidad huso horario ------------>
+                <div class="section husoHorarioIndex">
+                    <div id="husoHorarioIndex" class="husoHorarioIndex">
+                        <!-- Descripción -->
+                        <h2 class="seccionesIndexTitulo">Obtener Huso horario</h2>
+                        <p>Seleccione el país del cual desee obtener el huso horario correspondiente en el siguiente espacio.</p>
     
-            <p>Desde tu perfil, podrás acceder a una lista de los distintos países que con mayor frecuencia consultas.</p>
-            <div>
-                <h2>Inicia tu experiencia Mundial con Tempo</h2>
-                <div>
-                    <input type="submit" value="Iniciar Sesión">
-                    <input type="submit" value="Registrarse">
+                        <!-- Input País ingresado -->
+                        <div>
+                            <form action="#" type="submit">
+                                <input list="paises" name="pais" id="paisHH" placeholder="Ingrese un país">
+                                <!-- Lista de opciones -->
+                                <datalist id="paises">
+                                </datalist>
+                                <button id="botonHusoHorario"><i class="fa-solid fa-arrow-right fa-xl"></i></button>
+                            </form>
+                        </div>
+                    </div>
+    
+                    <div id="husoRespuesta" class="hidden husoHorarioIndex">
+                        <h2 id="nombrePaisHH"></h2>
+                        <div id="contenedorhoraHuso">
+                            <p id="hora"></p>
+                            <button id="resetHuso" class="botonFeriados"><i class="fa-solid fa-rotate-right"></i></button>
+                        </div>    
+                            
+                        <p id="fechaPaisHH"></p>
+                        <div id="chartdiv"></div>
+                        <!-- partial -->
+                    </div>
+
                 </div>
                 
-            </div>
-            
-        </div>
-        
 
-        <!--Accesos a otras páginas del sitio-->
-        <section>
-            <div>
-                <!--Primera carta: CONVERSOR-->
-                <div>
-                    <a href="./pages/conversor.html">
-                        <img src="./assets/img/conversor_inicio_card.webp" loading="lazy">
+
+                <!------------ Funcionalidad conversor ------------>
+                <div class="section conversorTiempo">
+                    <div id="conversorIndex">
+                        <!-- Descripción -->
+                        <h2 class="seccionesIndexTitulo">Conversor de tiempo</h2>
+                        <p>Seleccione en los dos espacios siguientes dos países de los cuales desea obtener una comparativa de horarios.</p>
+
+                        <!-- Input País ingresado -->
                         <div>
-                            <h3>CONVERSOR</h3>
-                            <p>Obtenga los husos horarios, la hora actual y la cantidad de horas de diferencia entre dos paises.</p>
+                            <form action="#" type="submit">
+                                <!-- País ingresado 1 -->
+                                <input list="paises" name="pais" id="pais1" class="inputConversor" placeholder="Ingrese un país">
+                                <!-- Lista de opciones -->
+                                <datalist id="paises">
+                                </datalist>
+
+                                <!-- País ingresado 2 -->
+                                <input list="paises" name="pais" id="pais2" class="inputConversor" placeholder="Ingrese un país">
+                                <!-- Lista de opciones -->
+                                <datalist id="paises">
+                                </datalist>
+                                
+                                <button type="submit" id="botonConversor"><i class="fa-solid fa-arrow-right fa-xl"></i></button>
+                            </form>
                         </div>
-                    </a>
+                    </div>
+                    <div id="conversorRespuesta" class="hidden">
+                        <div id="contenedorhorasConversor">
+                            <div class="horaPais">
+                                <h2 id="pais1Conv"></h2>
+                                <p id="hora1Conv"></p>
+                            </div>
+                            <div class="horaPais">
+                                <h2 id="pais2Conv"></h2>
+                                <p id="hora2Conv"></p>
+                            </div>
+                        </div>
+
+                        <div id="grilla">
+                            <div class="franja">
+                                <h3 id="paisFranja1"></h3>
+                                <div class="grillaHoras" id="grillaHoras1">
+                                </div>
+                            </div>
+                            <div class="franja">
+                                <h3 id="paisFranja2"></h3>
+                                <div class="grillaHoras" id="grillaHoras2">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="baseConversor">
+                            <h3 id="difHoras"></h3>
+                            <button id="resetConversor" class="botonConversor"><i class="fa-solid fa-rotate-right"></i></button>
+                        </div>
+                        
+                    </div>
+
                 </div>
 
-                <!--Segunda carta: FERIADOS-->
-                <div>
-                    <a href="./pages/feriados.html">
-                        <img src="./assets/img/feriados_inicio_card-01.webp" loading="lazy">
-                        <div>
-                            <h3>FERIADOS</h3>
-                            <p>Obtenga una lista de feriados de un país.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!--Tercer carta: MI HUSO HORARIO-->
-                <div>
-                    <a href="./pages/mi_huso_horario.html">
-                        <img src="./assets/img/mi_huso_inicio_card.webp" loading="lazy">
-                        <div class="card-body textoTarjeta">
-                            <h3>MI HUSO HORARIO</h3>
-                            <p>Obtenga el huso horario (UTC) de un país.</p>
-                        </div>
-                    </a>
-                </div>
             </div>
-        </section>
-
         </main>
 
-        <footer>
-        <!--FOOTER-->
-        <ul>
-            <li><a href="#">INICIO</a></li>
-            <li><a class="linkFooter" href="./pages/mi_perfil.html">Mi perfil</a></li>
-        </ul>            
-        </footer>
+        <!--libreria fullpage-->
+        <script>new fullpage('#fullpage', {
+            //options here
+            autoScrolling:true,
+            scrollHorizontally: true
+        });</script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="./js/script_ht.js"></script>
+
+        <!-- partial:index.partial.html -->
+        <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/geodata/worldTimeZoneAreasHigh.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/geodata/worldTimeZonesHigh.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/themes/material.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+        <script  src="./js/script_map.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
     </body>
 </html>
