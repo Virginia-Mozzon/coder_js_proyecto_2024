@@ -39,7 +39,6 @@ function vaciarElementoHtml(elemento) {
     }
 }
 
-// esInputCorrecto retorna 'undefined' si el input ingresado no es válido (no se encuentra en la lista de opciones de paises); y retorna un Objeto País si el input ingresado es válido.
 function getPais(arrayObjetosPais, input){
     const pais = input.value;
     for (paisObj of arrayObjetosPais) { 
